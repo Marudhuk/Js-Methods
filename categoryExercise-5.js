@@ -8,18 +8,11 @@ let arr = [
 ]
 let obj = {}
 let x = arr.map(e => { 
-    return obj[e.category] = [{ id: e.id, name: e.name }]
+    console.log(e);
+    if(e.category in obj){
+        obj[e.category].push(e)
+    }else{
+        obj[e.category]=[e]
+    }
 })
 console.log(obj);
-
-// if(obj=={}){
-//     console.log("ERRO")
-//     obj[e.category]=e
-// }else{
-//     obj[e.category].push(e)
-// }
-
-
-
-
-
