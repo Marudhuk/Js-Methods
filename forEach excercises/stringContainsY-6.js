@@ -6,6 +6,7 @@ arr.forEach(e=>{
         flag=1
     }
 })
+
 if(flag){
     console.log("yes")
 }else{
