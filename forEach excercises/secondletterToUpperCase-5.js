@@ -1,10 +1,8 @@
-str="marudhu"
-let x=arr.forEach((e,i)=>{
-    console.log()
-    if(i%2==0){
-        str
+let str="marudhu"
+let arr= str.split('')
+arr.forEach((e,i)=>{
+    if(i%2!==0){
+        arr[i]=arr[i].toUpperCase()
     }
-   console.log(e[1].toUpperCase());
-    
 })
-console.log(x)
+console.log(arr.join(''))
