@@ -27,37 +27,39 @@
 // }
 
 function isPrime(num) {
-    if (num < 2) return false; // 0 and 1 are not prime
+    if (num < 2) {
+        return false;
+    }
     for (let i = 2; i <= Math.sqrt(num); i++) {
       if (num % i === 0) {
-        return false; // number is divisible by i, so it's not prime
+        return false; 
       }
     }
-    return true; // number is not divisible by any i, so it's prime
+    return true; 
   }
   
 function getPrimeFactors(n) {
-    a = [];
+    arr = [];
     for (i = 2; i <= n; i++) 
     {
         if (isPrime(i) && n % i == 0) {
-            a.push(i)
+            arr.push(i)
             n = n / i;
 
             i = 1;
             if(isPrime(n)){
-                a.push(n)
+                arr.push(n)
                 break;
             }
         }
     }
-    return a
+    return arr
 
 }
 
-let n = [15];
+let num = [15];
 obj = {}
-let x =n.map(e => {
+let x =num.map(e => {
     if(isPrime(e)){
         obj[e]=[e]
     }
